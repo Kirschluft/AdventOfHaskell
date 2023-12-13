@@ -1,6 +1,6 @@
 module Day7 where
 
-import Data.List (sort, group, groupBy, sortBy)
+import Data.List (sort, group, sortBy)
 import Data.Char (isDigit)
 import Data.Ord (comparing, Down (Down))
 
