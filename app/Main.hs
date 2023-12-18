@@ -20,6 +20,7 @@ import qualified Day13 (solve1, solve2)
 import qualified Day14 (solve1, solve2)
 import qualified Day15 (solve1, solve2)
 import qualified Day16 (solve1, solve2)
+import qualified Day18 (solve1, solve2)
 import System.Console.CmdArgs
 
 data DaysArgs = DaysArgs { day :: Integer, part :: Integer, file :: String } 
@@ -70,6 +71,8 @@ solveDays day part file =
       (15, 2) -> putStrLn $ "Solution to day 15 part 2: " ++show (Day15.solve2 $ lines input)
       (16, 1) -> putStrLn $ "Solution to day 16 part 1: " ++show (Day16.solve1 $ lines input)
       (16, 2) -> putStrLn $ "Solution to day 16 part 2: " ++show (Day16.solve2 $ lines input)
+      (18, 1) -> putStrLn $ "Solution to day 18 part 1: " ++show (Day18.solve1 $ lines input)
+      (18, 2) -> putStrLn $ "Solution to day 18 part 2: " ++show (Day18.solve2 $ lines input)
       _ -> putStrLn "Input not supported."
 
 main :: IO ()

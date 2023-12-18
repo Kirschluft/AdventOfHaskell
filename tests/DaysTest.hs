@@ -17,6 +17,7 @@ import qualified Day13 as D13
 import qualified Day14 as D14
 import qualified Day15 as D15
 import qualified Day16 as D16
+import qualified Day18 as D18
 
 test1Day1 :: [String] -> Test
 test1Day1 input = TestCase(assertEqual "Test day1 part 1: " 142 (D1.solve1 input))
@@ -117,6 +118,12 @@ test1Day16 input = TestCase(assertEqual "Test day16 part 1: " 46 (D16.solve1 inp
 test2Day16 :: [String] -> Test
 test2Day16 input = TestCase(assertEqual "Test day16 part 2: " 51 (D16.solve2 input))
 
+test1Day18 :: [String] -> Test
+test1Day18 input = TestCase(assertEqual "Test day18 part 1: " 62 (D18.solve1 input))
+
+test2Day18 :: [String] -> Test
+test2Day18 input = TestCase(assertEqual "Test day18 part 2: " 952408144115 (D18.solve2 input))
+
 main :: IO ()
 main = do
   file1Day1 <- readFile "tests/day1_1.input"
@@ -149,6 +156,8 @@ main = do
   file2Day15 <- readFile "tests/day15_2.input"
   file1Day16 <- readFile "tests/day16_1.input"
   file2Day16 <- readFile "tests/day16_2.input"
+  file1Day18 <- readFile "tests/day18_1.input"
+  file2Day18 <- readFile "tests/day18_2.input"
   runTestTTAndExit $ TestList [ 
                         test1Day1 $ lines file1Day1,
                         test2Day1 $ lines file2Day1,
@@ -182,5 +191,7 @@ main = do
                         test1Day15 $ lines file1Day15,
                         test2Day15 $ lines file2Day15,
                         test1Day16 $ lines file1Day16,
-                        test2Day16 $ lines file2Day16
+                        test2Day16 $ lines file2Day16,
+                        test1Day18 $ lines file1Day18,
+                        test2Day18 $ lines file2Day18
                        ]
