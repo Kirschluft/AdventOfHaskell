@@ -1,0 +1,39 @@
+cabal-version:      2.4
+name:               Advent-Of-Haskell
+version:            0.1.0.0
+author:             Kirschluft
+
+library
+    exposed-modules:     Day1, Day2, Day3, Day4, Day5, Day6, Day7, Day8, Day9, Day10, Day11, Day12, Day13, Day14, Day15, Day16, Day18
+    hs-source-dirs:      src
+    build-depends:       base
+                        , containers
+                        , text
+                        , hgeometry
+                        , hgeometry-combinatorial
+                        , split
+                        , unordered-containers
+    default-language:    Haskell2010
+    
+executable Advent-Of-Haskell
+    main-is:          Main.hs
+    other-modules:    Day1 Day2 Day3 Day4 Day5 Day6 Day7 Day8 Day9 Day10 Day11 Day12 Day13 Day14 Day15 Day16 Day18
+    build-depends:    base
+                      , QuickCheck
+                      , cmdargs
+                      , containers
+                      , text
+                      , hgeometry
+                      , hgeometry-combinatorial
+                      , split
+                      , unordered-containers
+    hs-source-dirs:   app src
+    default-language: Haskell2010
+
+test-suite days-test
+  type:               exitcode-stdio-1.0
+  hs-source-dirs:     tests
+  main-is:            DaysTest.hs
+  build-depends:      base, HUnit, Advent-Of-Haskell
+  default-language:   Haskell2010
+
